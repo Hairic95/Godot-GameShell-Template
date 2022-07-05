@@ -1,0 +1,93 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://scenes/entities/ControlIcon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/a_button_normal.png" type="Texture" id=2]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/a_button_pressed.png" type="Texture" id=3]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/b_button_normal.png" type="Texture" id=4]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/b_button_pressed.png" type="Texture" id=5]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/x_button_pressed.png" type="Texture" id=6]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/x_button_normal.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/y_button_normal.png" type="Texture" id=8]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/y_button_pressed.png" type="Texture" id=9]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/arrow_button_normal.png" type="Texture" id=10]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/arrow_button_pressed_up.png" type="Texture" id=11]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/arrow_button_pressed_down.png" type="Texture" id=12]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/arrow_button_pressed_right.png" type="Texture" id=13]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/arrow_button_pressed_left.png" type="Texture" id=14]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/start_button_pressed.png" type="Texture" id=15]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/start_button_normal.png" type="Texture" id=16]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/menu_button_pressed.png" type="Texture" id=17]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/select_button_normal.png" type="Texture" id=18]
+[ext_resource path="res://assets/textures/KenneyInputPromptsPixels/menu_button_normal.png" type="Texture" id=19]
+
+[node name="ControlCheckScene" type="Node2D"]
+scale = Vector2( 2, 2 )
+
+[node name="ButtonA" parent="." instance=ExtResource( 1 )]
+position = Vector2( 126, 90 )
+texture = ExtResource( 2 )
+normal_texture = ExtResource( 2 )
+pressed_texture = ExtResource( 3 )
+
+[node name="ButtonB" parent="." instance=ExtResource( 1 )]
+position = Vector2( 142, 76 )
+texture = ExtResource( 4 )
+normal_texture = ExtResource( 4 )
+pressed_texture = ExtResource( 5 )
+action_input = "b_button"
+
+[node name="ButtonX" parent="." instance=ExtResource( 1 )]
+position = Vector2( 110, 76 )
+texture = ExtResource( 7 )
+normal_texture = ExtResource( 7 )
+pressed_texture = ExtResource( 6 )
+action_input = "x_button"
+
+[node name="ButtonY" parent="." instance=ExtResource( 1 )]
+position = Vector2( 126, 62 )
+texture = ExtResource( 8 )
+normal_texture = ExtResource( 8 )
+pressed_texture = ExtResource( 9 )
+action_input = "y_button"
+
+[node name="BGArrowButton" type="Sprite" parent="."]
+position = Vector2( 34, 76 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="ButtonUp" parent="BGArrowButton" instance=ExtResource( 1 )]
+pressed_texture = ExtResource( 11 )
+action_input = "up_button"
+
+[node name="ButtonRight" parent="BGArrowButton" instance=ExtResource( 1 )]
+pressed_texture = ExtResource( 13 )
+action_input = "right_button"
+
+[node name="ButtonLeft" parent="BGArrowButton" instance=ExtResource( 1 )]
+pressed_texture = ExtResource( 14 )
+action_input = "left_button"
+
+[node name="ButtonDown" parent="BGArrowButton" instance=ExtResource( 1 )]
+pressed_texture = ExtResource( 12 )
+action_input = "down_button"
+
+[node name="ButtonStart" parent="." instance=ExtResource( 1 )]
+position = Vector2( 138, 22 )
+texture = ExtResource( 16 )
+normal_texture = ExtResource( 16 )
+pressed_texture = ExtResource( 15 )
+action_input = "start_button"
+
+[node name="ButtonSelect" parent="." instance=ExtResource( 1 )]
+position = Vector2( 110, 22 )
+texture = ExtResource( 18 )
+normal_texture = ExtResource( 18 )
+pressed_texture = ExtResource( 15 )
+action_input = "select_button"
+
+[node name="ButtonMenu" parent="." instance=ExtResource( 1 )]
+position = Vector2( 34, 22 )
+texture = ExtResource( 19 )
+normal_texture = ExtResource( 19 )
+pressed_texture = ExtResource( 17 )
+action_input = "menu_button"
