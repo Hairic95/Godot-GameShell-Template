@@ -52,7 +52,6 @@ action_input = "y_button"
 
 [node name="BGArrowButton" type="Sprite" parent="."]
 position = Vector2( 34, 76 )
-scale = Vector2( 2, 2 )
 texture = ExtResource( 10 )
 
 [node name="ButtonUp" parent="BGArrowButton" instance=ExtResource( 1 )]
