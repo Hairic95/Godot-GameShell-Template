@@ -63,5 +63,5 @@ func _ready():
 
 func _process(delta):
 	# Comment if you want to handle the Menu/ESC button
-	if OS.has_feature("GameShell") && Input.is_action_just_pressed("menu_button"):
+	if OS.has_feature("GameShell") && Input.is_action_pressed("menu_button"):
 		get_tree().quit()
